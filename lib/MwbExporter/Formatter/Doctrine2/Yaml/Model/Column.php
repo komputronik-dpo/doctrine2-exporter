@@ -48,7 +48,7 @@ class Column extends BaseColumn
             $values['nullable'] = $this->getNullableValue();
         }
         if($this->isUnsigned()) {
-            $values['unsigned'] = true;
+            $values['options']['unsigned'] = true;
         }
         if ($this->isAutoIncrement()) {
             $values['generator'] = array('strategy' => strtoupper($this->getConfig()->get(Formatter::CFG_GENERATED_VALUE_STRATEGY)));
